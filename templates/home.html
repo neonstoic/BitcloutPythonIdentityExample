@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <p>You are logged in as {{ userinfo['username'] }}</p>
+    <div id="profileimage">
+      <img src="https://api.bitclout.com/api/v0/get-single-profile-picture/{{ pubkey }}">
+    </div>
+
+    <p>Thank you and welcome to the exclusive club of NeonStoic owners!!</p>
+        
+    <a class="btn btn-primary" role="button" href="/logout">Logout</a>
+{% endblock %}

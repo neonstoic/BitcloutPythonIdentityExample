@@ -1,0 +1,64 @@
+#main {
+    display: flex;
+    align-items: center;
+    margin-top:20px;
+}
+
+#main > .content {
+    flex: 1
+}
+
+#main > .leftside, 
+#main > .rightside {
+  flex: 0 0 30vw;
+  background: beige;
+}
+
+#header {
+    display: flex;
+}
+#header > .leftside,
+#header > .rightside {
+    flex: 0 0 40 vw;
+}
+#header >.leftside {
+    justify-content: left;
+}
+#header > .rightside {
+    justify-content: right;
+}
+#headerimg {
+    width:75px;
+    background-image:url('/static/diamonds.jpg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#footer {
+    display:flex;
+    margin-top:20px;
+}
+#footer > .leftside,
+#footer > .rightside {
+    flex: 0 0 30vw;
+}
+#footer > .footstuff {
+    justify-content: left;
+    border-top: 1px solid gray;
+    color:gray;
+    width:100%;
+}
+
+#footer >.footstuff a {
+    color:gray;
+    text-decoration: none;
+}
+#footer >.footstuff a:hover {
+    color:yellow;
+    text-decoration: none;
+}
+
+#profileimage {
+    margin:5px;
+}

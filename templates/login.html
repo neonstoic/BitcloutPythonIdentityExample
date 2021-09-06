@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+      <p>
+        This is a sample Python/Flask application that demonstrates how
+        to use the Bitclout Identity API to perform a user login. Additionally, 
+        this shows how to take advantage of the Bitclout Backend API to 
+        perform further verification on the user. In this example, in order to 
+        login, the user must also hold <a href="https://bitclout.com/u/NeonStoic"></a>NeonStoic</a> 
+        creator coin! 😊
+      </p>
+      <p><i>Note that you can just buy $0.10 worth or even <a href="https://bitclout.com/u/NeonStoic">ask me</a> and I'll send you some.</i></p>
+
+      <form id="loginform" method="post">    
+        {% if error is defined %}
+          {{error}}<br/>
+        {% endif %}
+
+        <input type="hidden" id="jwt" name="jwt">
+        <input type="hidden" id="pubkey" name="pubkey">
+      </form>
+      <input type="button" class="btn btn-primary" value="Log In" onclick="startBitcloutLogin();">
+
+  <iframe id="identity" frameborder="0" src="https://identity.bitclout.com/embed?v=2" style="height: 100vh; width: 100vw;visibility:hidden;position:absolute;"></iframe>
+  <script src="{{ url_for('static', filename='BitcloutLogin.js') }}"></script>
+  <script src="https://unpkg.com/uuid@latest/dist/umd/uuidv4.min.js"></script>
+{% endblock %}
