@@ -2,7 +2,7 @@
 
 This is a working Python Flask app that uses the Bitclout Identity API for login.
 
-Demo here: http://lime-juicy-opportunity.glitch.me/login
+Demo here: https://lime-juicy-opportunity.glitch.me/login
 
 The application shows the following things :
 
