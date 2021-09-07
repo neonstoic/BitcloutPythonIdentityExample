@@ -62,3 +62,14 @@
 #profileimage {
     margin:5px;
 }
+
+@media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+    #main > .leftside, #main > .rightside {
+      flex: 0 0 5vw;
+    }
+
+    #footer > .leftside, #footer > .rightside {
+        flex: 0 0 5vw;
+    }
+}
